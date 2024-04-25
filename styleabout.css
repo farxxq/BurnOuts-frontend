@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Popins',sans-serif;
+}
+
+body{
+    background-color: #eaeaea;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+}
+
+.logo{
+    font-size: 40px;
+    color: rgb(119, 182, 224);
+    text-shadow: 1px 3px blue;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+/* nav-bar */
+.navbar a{
+    display: inline-block;
+    font-size: 18px;
+    color: rgb(134, 116, 116);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: color .5s,font .5s;
+    animation: slideTop 1s ease forwards;
+    opacity: 0;
+    animation-delay: calc(.2s * var(--i));
+
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: blue;
+    font-size: 18.5px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    border: 1px solid transparent;
+    border-radius: 90%;
+    text-decoration: none;
+    transition: border-color .5s ease-in-out;
+    animation: slideSci 1s ease forwards;
+    opacity: 0;
+    animation-delay: calc(.10s * var(--i));
+}
+.social-media a:hover{
+    border-color: rgb(255, 255, 255);  
+
+}
+
+
+.social-media a i{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.home .circle{
+    position: fixed;
+    top: -25%;
+    right: -15%;
+    width: 700px;
+    height: 700px;
+    border-radius: 90%;
+    background-color: blue;
+    transform: rotate(45deg);
+    z-index: -1;
+    opacity: 0;
+    animation: circle 1s ease forwards;
+}
+
+
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 100;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 100;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+@keyframes slideSci{
+    0%{
+        transform: translateX(100px) rotate(0deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0) rotate(0deg);
+        opacity: 100;
+    }
+}
+
+@keyframes zoomOut{
+    0%{
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 100;
+    }
+}
+
+@keyframes car {
+    0%{
+        transform: translate(300px , -300px) scale(0) rotate(-15deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0 , 0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes circle{
+    0%{
+        right: -40%;
+        opacity: 0;
+    }
+    100%{
+        right: -25%;
+        opacity: 100;
+    }
+}
